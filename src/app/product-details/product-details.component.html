@@ -11,10 +11,12 @@
   <h4>{{ product.price | currency:'EUR' }}</h4>
   <p>{{ product.description | uppercase}}</p>
 
+  <button (click)="addToCart(product)">Compra</button>
+
 </div>
 
 
 <div *ngIf="!product">
-    <h1>Prodotto non trovato</h1>
+  <h1>Prodotto non trovato</h1>
 
-  </div>
+</div>
