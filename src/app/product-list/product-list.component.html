@@ -1,1 +1,35 @@
 <h2>Products</h2>
+
+<!-- div che si ripete tante volte quanta la dimensione di products -->
+<div *ngFor="let product of products">
+
+		<h3>
+				<!-- assegno la proprietà name e tutto il resto alla ...
+					... variabile input title -->
+				<a [title]="product.name + ' details'">
+					<!-- prendo la proprietà name di ogni elemento product che viene ...
+					... ciclato ogni volta nel ciclo for di products -->
+						{{ product.name }}
+				</a>
+		</h3>
+
+	<!-- direttiva angular (condizione if) che esegue il contenuto del ...
+		... paragrafo solo se la condizione "product.description" è vera.
+		Nel caso di una stringa, ciò è vera se semplicemente non è vuota-->
+		<p *ngIf="product.description">
+			Description: {{ product.description }}
+		</p>
+
+	<!-- quando emetti un evento di click chiamami la funzione di share -->
+		<button (click)="share()">
+			Share
+		</button>
+
+	<!-- stiamo passando un product, vuole in input una proprietà product e notify-->
+		<app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+
+
+  <!-- separatore -->
+	<hr>
+
+</div>

@@ -1,0 +1,12 @@
+<p *ngIf="product.price > 700">
+	<b>Il prezzo è > 700</b>
+</p>
+
+<p *ngIf="product.price < 700">
+	<b>Il prezzo è < 700</b>
+</p>
+
+<!-- CONDIZIONE OUTPUT -->
+<p *ngIf="product.price > 700">
+  <button (click)="notify.emit()">Notify Me</button>
+</p>

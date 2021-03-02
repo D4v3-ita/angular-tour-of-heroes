@@ -1,3 +1,4 @@
+// products è una costante ed anche un array
 export const products = [
   {
     id: 1,
