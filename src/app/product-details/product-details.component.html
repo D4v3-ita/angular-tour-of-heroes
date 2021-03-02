@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="product-details.component.css">
+
+<h2>Product Details</h2>
+
+<!-- usiamo un if perchè product può dare come risultato true/false -->
+<!-- SENZA DIV: true > risultato esatto | false > da errore in console -->
+<!-- CON DIV: true > risultato esatto | false > stampa nulla (undefined) -->
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <!-- currency passa il valore in euro grazie al ':' -->
+  <h4>{{ product.price | currency:'EUR' }}</h4>
+  <p>{{ product.description | uppercase}}</p>
+
+</div>
+
+
+<div *ngIf="!product">
+    <h1>Prodotto non trovato</h1>
+
+  </div>

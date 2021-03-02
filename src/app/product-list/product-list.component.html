@@ -6,7 +6,7 @@
 		<h3>
 				<!-- assegno la proprietà name e tutto il resto alla ...
 					... variabile input title -->
-				<a [title]="product.name + ' details'">
+				<a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
 					<!-- prendo la proprietà name di ogni elemento product che viene ...
 					... ciclato ogni volta nel ciclo for di products -->
 						{{ product.name }}
