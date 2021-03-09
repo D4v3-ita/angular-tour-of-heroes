@@ -1,0 +1,18 @@
+<h3>Shipping Prices</h3>
+
+<div *ngIf="waiting" class="waiting">Sto caricando i dati...</div>
+
+<div *ngIf="!waiting">
+
+  <div class="shipping-item" *ngFor="let shipping of shippingCosts">
+    <span>{{ shipping.type }}</span>
+    <span>{{ shipping.price | currency:'EUR' }}</span>
+  </div>
+
+</div>
+
+
+
+<!-- <div class="class-of-item" *ngFor="let item of items">
+  <h2>{{item.name}}</h2>
+</div> -->
